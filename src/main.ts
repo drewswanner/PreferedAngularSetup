@@ -6,16 +6,12 @@ import { bootstrapApplication } from '@angular/platform-browser';
 @Component({
   selector: 'my-app',
   standalone: true,
+  styleUrls: ['./main.scss'],
   imports: [CommonModule],
   template: `
-    <h1>Hello from {{name}}!</h1>
-    <a target="_blank" href="https://angular.io/start">
-      Learn more about Angular 
-    </a>
+    <h1>Grettir Store<h1>
   `,
 })
-export class App {
-  name = 'Angular';
-}
+export class App {}
 
 bootstrapApplication(App);
