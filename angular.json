@@ -39,6 +39,7 @@
             "assets": [],
             "index": "src/index.html",
             "main": "src/main.ts",
+            "polyfills": [ "src/polyfills.ts"],
             "outputPath": "dist/demo",
             "scripts": [],
             "styles": [
@@ -86,7 +87,7 @@
             ],
             "karmaConfig": "src/karma.conf.js",
             "main": "src/test.ts",
-            "polyfills": [],
+            "polyfills": [ "src/polyfills.ts"],
             "scripts": [],
             "styles": [
               "styles.css"
