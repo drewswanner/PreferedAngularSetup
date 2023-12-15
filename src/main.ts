@@ -1,21 +1,18 @@
-import 'zone.js/dist/zone';
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { bootstrapApplication } from '@angular/platform-browser';
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-@Component({
-  selector: 'my-app',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
-    <h1>Hello from {{name}}!</h1>
-    <a target="_blank" href="https://angular.io/start">
-      Learn more about Angular 
-    </a>
-  `,
-})
-export class App {
-  name = 'Angular';
+import { AppModule } from './app.module';
+import { environment } from './environments/environment';
+
+// Add AOS Animations
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
+AOS.init();
+
+if (environment.production) {
+  enableProdMode();
 }
 
-bootstrapApplication(App);
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));

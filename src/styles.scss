@@ -1,0 +1,69 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import '@angular/material/prebuilt-themes/deeppurple-amber.css'; */
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome/scss/font-awesome";
+
+
+// html {
+//   width: 1000px;
+// }
+
+body {
+  display: block;
+  background-color: grey;
+  background-image: URL('assets/images/Background.jpg');
+  background-position-x: center;
+  background-position-y: 0;
+  background-repeat:no-repeat;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+}
+
+nav#navbar-main {
+  display: flex;
+  width: 100%;
+  z-index: 100;
+  background-color: blue;
+  border: 1px solid red;
+}
+
+nav,#navbar-main, .position-fixed {
+  position: static !important;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+  background-color: blue;
+}
+
+#companyDetailsHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding-right: 20px;
+}
+
+#companyDetailsHeader > h1 {
+  font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  letter-spacing: normal;
+}
+
+app-under-construction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}

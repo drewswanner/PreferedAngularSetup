@@ -1,0 +1,44 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [{
+      "type": "chrome",
+      "request": "launch",
+      "name": "sampleChrome",
+      "url": "http://localhost:4200",
+      "webRoot": "${workspaceFolder}/sampleexpressusa/dist"
+    },
+    {
+      "name": "Launch getFuelRates",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/scripts/getFuelRates.js",
+      "stopOnEntry": false,
+      "args": [],
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "${env:HOME}/.nvm/versions/node/v12.14.0/bin/node",
+    },
+    {
+      "name": "Launch sampleBackend",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/backendService/app.js",
+      "stopOnEntry": false,
+      "args": [],
+      "cwd": "${workspaceRoot}/backendService",
+      "env": {
+        "DEBUG": true
+      }
+      "runtimeExecutable": "${env:HOME}/.nvm/versions/node/v12.14.0/bin/node",
+    },
+  ],
+  "compounds": [{
+    "name": "FLE Website",
+    "configurations": [
+      "Launch sampleBackend",
+      "sampleChrome"
+    ]
+  }]
+}
